@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Word List</title>
+    <style>
+    input[type="text"] {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    body{
+        background-color: rgb(234, 231, 228);
+    }
+    
+    button {
+        margin: 10px 0;
+        padding: 5px 10px;
+    }
+    
+    #wordInput:disabled, #addWordButton:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+    .container{
+        border: 1px solid grey;
+        background-color:white;
+        width:40%;
+        text-align:center;
+        position:absolute;
+        left:50%;
+        top:40%;
+        transform: translate(-50%, -50%);
+        margin-top:15px;
+    }
+    .containerWord{
+        overflow: hidden;
+    }
+    .left{
+        float:left;
+        margin-left: 15px;
+    }
+    .right{
+        float:right;
+        margin-right: 15px;
+    }
+
+</style>
+    </head>
+<body>
+    <div class="container">
+    <h3>Word Sortting by Richard</h3>
+    <h2>Enter Words Up to 10 </h2>
+    <input type="text" id="wordInput" placeholder="Enter a word" />
+    <button id="addWordButton">Add Word</button>
+    <p>Words Entered: <span id="wordCount">0</span>/10</p>
+        <div class="containerWord">
+            <div class="left">
+    <h3>Original Order:</h3>
+    <ul id="originalOrderList"></ul>
+</div>
+<div class="right">
+    <h3>Sorted Order:</h3>
+    <ul id="sortedOrderList"></ul>
+    </div>
+</div>
+</div>
+    <script src="Assignment.js"></script>
+</body>
+</html>
